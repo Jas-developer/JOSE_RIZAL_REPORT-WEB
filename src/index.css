@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Montserrat:wght@700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app{
+    height: 100%;
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    @apply text-gray-500;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  background-color: aliceblue; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.blur-bg {
+  backdrop-filter: blur;
+}
