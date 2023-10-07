@@ -6,6 +6,7 @@ import {motion } from 'framer-motion';
 import { BenifitType } from "@/shared/type";
 import { Benefit } from "./Benefit";
 import { ActionButton } from "@/shared/ActionButton";
+import BenifitPageGraphic from "@/assets/BenefitsPageGraphic.png"
 
 
 const benifits : Array<BenifitType> = [
@@ -69,24 +70,38 @@ const Benifits = ({setSelectedPage}: Props) => {
            </motion.div>
            
            {/* graphics and description */}
-            <div>
+            <div className="md:flex mt-16 items-center justify-between gap-20 md:mt-28 ">
               {/* graphic */}
-              <img src="" alt="" />
+              <img src={BenifitPageGraphic} alt="" className="mx-auto" />
               {/* description */}
               <div>
                 {/* title */}
                 <div className="relative">
                   <div className="before:absolute  before:content-abstractwaves before:-left-20 before:z-[1]  before:-top-20"></div>
-                  <HText>
+                 <motion.div  initial="hidden" whileInView="visible" 
+                  viewport={{once:false, amount: 0.5}}
+                  transition={{ delay: 0.4, duration: 1}}
+                  variants={{ 
+                  hidden: {opacity: 0, x:-50},
+                  visible:{opacity: 1, x:0},
+                  }}>
+                   <HText>
                     MILLIONS OF HAPPY MEMBERS GETTING {" "}
                     <span className="text-primary-500"> FIT.</span>
                   </HText>
+                 </motion.div>
                 </div>
                 {/* description */}
-                <div>
+                <motion.div   initial="hidden" whileInView="visible" 
+             viewport={{once:false, amount: 0.5}}
+             transition={{ delay: 0.2, duration: 1}}
+             variants={{ 
+             hidden: {opacity: 0, x:-50},
+             visible:{opacity: 1, x:0},
+            }}>
                   <p className="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nihil nesciunt recusandae error totam cumque porro, libero aut esse assumenda!</p>
                   <p className="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero perferendis ducimus cum!</p>
-                </div>
+                </motion.div>
               {/* button */}
                <div className="relative mt-16"> 
                 <div className="before:absolute before:-bottom-20 before:right-20 before:z-[1] before:content-sparkles">
