@@ -4,7 +4,8 @@ import { SelectedPage } from './shared/type';
 import { Home } from './scenes/home';
 import { Benifits } from './scenes/benifits';
 import { OurClasses } from './scenes/ourClasses';
-
+import { ContactUS } from './scenes/contactus';
+import { Footer } from './scenes/footer';
 const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   const [isTopOfPage,setIsTopOfPage] = useState<boolean>(true);
@@ -28,6 +29,8 @@ const App = () => {
      <Home setSelectedPage={setSelectedPage}/>
      <Benifits setSelectedPage={setSelectedPage}/>
      <OurClasses setSelectedPage={setSelectedPage}/>
+     <ContactUS setSelectedPage={setSelectedPage}/>
+     <Footer />
     </div>
   );
 };
