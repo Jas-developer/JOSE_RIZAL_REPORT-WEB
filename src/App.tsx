@@ -29,7 +29,7 @@ const App = () => {
      <Home setSelectedPage={setSelectedPage}/>
      <Benifits setSelectedPage={setSelectedPage}/>
      <OurClasses setSelectedPage={setSelectedPage}/>
-     <ContactUS setSelectedPage={setSelectedPage}/>
+     <ContactUS/>
      <Footer />
     </div>
   );
