@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png";
+
 import {Link} from "./Link";
 import { SelectedPage } from "@/shared/type";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -85,23 +85,23 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           {/* MENU ITEMS */}
           <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-            <Link
+            <Link title="Home"
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <Link title="About"
               page="Benefits"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             
             />
-            <Link
+            <Link title="Explanation"
               page="Our Classes"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <Link title="Conclutions"
               page="Contact Us"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}

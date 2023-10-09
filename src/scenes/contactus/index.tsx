@@ -1,4 +1,4 @@
-import { SelectedPage } from "@/shared/type";
+
 import { motion } from "framer-motion";
 
 import ContactUsGraphic from "@/assets/Asimilation.png";
@@ -11,7 +11,7 @@ import { HText } from "@/shared/HText";
    
 const ContactUS = () => {    return (
         <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
-            <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
+            <motion.div >
              {/* HEADER */}
              <motion.div   initial="hidden" whileInView="visible" 
              viewport={{once:true, amount: 0.5}}
