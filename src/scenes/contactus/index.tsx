@@ -1,35 +1,15 @@
 import { SelectedPage } from "@/shared/type";
 import { motion } from "framer-motion";
-import { useForm } from "react-hook-form";
-import ContactUsGraphic from "@/assets/ContactUsPageGraphic.png";
+
+import ContactUsGraphic from "@/assets/Asimilation.png";
 import { HText } from "@/shared/HText";
 
-type Props = {
-    setSelectedPage: (value : SelectedPage) => void;
-}
-
-
-const ContactUS = ({setSelectedPage} : Props) => {
-
-    const {
-        register,
-        trigger,
-        formState: { errors }
-    } = useForm();
-
-   const onSubmit = async (e: any) => {
-    const isValid = await trigger();
-    if(!isValid){
-        e.preventDefault();
-    }
-   }
 
 
 
 
-   const INPUT_STYLES = `w-full rounded-lg bg-primary-300 px05 py-3 placeholder-white text-center outline-none mb-5`;
-
-    return (
+   
+const ContactUS = () => {    return (
         <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
              {/* HEADER */}
@@ -41,11 +21,20 @@ const ContactUS = ({setSelectedPage} : Props) => {
              visible:{opacity: 1, x:0},
             }} className="md:w-3/5">
               <HText>
-                <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+                <span className="text-primary-500">CONCLUTIONS</span> 
               </HText>
-              <p className="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum distinctio libero provident velit iusto iure!</p>
+              <p className="my-5 text-lg">Let's digest all the idea that we have and put it into conlutions</p>
              </motion.div>
              {/* FORM AND IMAGE */}
+             <div className="flex flex-col">
+              <p>
+                
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+             </div>
              <div className="mt-10 justify-between gap-8 md:flex">
                 <motion.div className="mt-10 basis-3/5 md:mt-0"  initial="hidden" whileInView="visible" 
              viewport={{once:true, amount: 0.5}}
@@ -54,59 +43,22 @@ const ContactUS = ({setSelectedPage} : Props) => {
              hidden: {opacity: 0, y:-100},
              visible:{opacity: 1, y:0},
             }}>
-
-                <form className="" target="_blank"   onSubmit={onSubmit} method="POST" action="https://formsubmit.co/evaristojason25@email.com">
-                    {/* for name */}
-                  <input className={INPUT_STYLES} type="text"  placeholder="NAME" {...register("name",{
-                    required: true,
-                    maxLength:100,
-                  })}/>
-                  {errors.name && (
-                    <p className="mt-1 text-primary-500">
-                        {errors.name.type === "required" && "This field is required" }
-                         {errors.name.type === "maxLength" && "Max length is 100 character." }
-                    </p>
-                  )}
-                      {/* for email */}
-                    <input className={INPUT_STYLES} type="text"  placeholder="EMAIL" {...register("email",{
-                    required: true,
-                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  })}/>
-                  {errors.email && (
-                    <p className="mt-1 text-primary-500">
-                        {errors.email.type === "required" && "This field is required" }
-                         {errors.email.type === "pattern" && "Invalid email address." }
-                    </p>
-                  )}
-
-                  {/* text area */}
-                    <textarea
-                className={INPUT_STYLES}
-                placeholder="MESSAGE"
-                rows={4}
-                cols={50}
-                {...register("message", {
-                  required: true,
-                  maxLength: 2000,
-                })}
-              />
-              {errors.message && (
-                <p className="mt-1 text-primary-500">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 char."}
-                </p>
-              )}
-              {/* button */}
-              <button
-                type="submit"
-                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
-              >
-                SUBMIT
-              </button>
-                </form>
-
+        
+          <h1></h1>
+          
+       <div className="flex flex-col gap-8">
+          <p>Rizal's relationship with the Propaganda Movement was also significant. He was one of the movement's most prominent members, and he used his talents to advocate for the reforms that the propagandists sought. Rizal's work helped to raise awareness of the Philippine situation and to inspire the next generation of Filipino nationalists.
+          </p>
+   <p>Rizal's relationship with the Propaganda Movement was also significant. He was one of the movement's most prominent members, and he used his talents to advocate for the reforms that the propagandists sought. Rizal's work helped to raise awareness of the Philippine situation and to inspire the next generation of Filipino nationalists.
+</p>
+<p>Rizal's relationship with the Propaganda Movement was a complex one. He was a strong supporter of the movement's goals, but he was also critical of some of its methods. He believed that the propagandists should use peaceful means to achieve their goals, and he was opposed to violence and revolution.
+</p>
+<p>Despite his criticisms, Rizal remained a loyal member of the Propaganda Movement until his death. He believed that the movement was essential to the advancement of the Filipino people.
+</p>
+<p>Rizal's relationship with the Propaganda Movement was also significant because it helped to shape his own political philosophy. Rizal was a reformist, and he believed that the Philippines could achieve independence through gradual change. He was also a humanist, and he believed that all people deserved to be treated with dignity and respect.
+</p>
+<p>Rizal's legacy continues to inspire Filipinos today. He is remembered as a patriot, a hero, and a martyr. His work helped to lay the foundation for the Philippine Revolution and the eventual establishment of an independent Philippine state</p>
+       </div>
                 </motion.div>
 
 

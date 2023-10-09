@@ -34,7 +34,7 @@ export const Benefit = ({icon , title, setSelectedPage,description}:Props ) => {
          </div>
          <h4 className="font-bold">{title}</h4>
          <p className="my-3">{description}</p>
-        <AnchorLink href={`#${SelectedPage.ContactUs}`} onClick={() => setSelectedPage(SelectedPage.Benifits)} className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'>
+        <AnchorLink href={`#${SelectedPage.ContactUs}`} onClick={() => setSelectedPage(SelectedPage.ContactUs)} className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'>
         <p>Learn More</p>
         </AnchorLink>
         </motion.div>

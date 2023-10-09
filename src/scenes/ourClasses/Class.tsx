@@ -22,7 +22,7 @@ export const Class = ({image,name,description ="description"}: Props) => {
             <p className="text-2xl">{name}</p>
             <p className="mt-5 ">{description}</p>
          </div>
-         <img src={image} alt={image} />
+         <img src={image} alt={image}  className="object-fill w-full"/>
         </li>
     )
 }

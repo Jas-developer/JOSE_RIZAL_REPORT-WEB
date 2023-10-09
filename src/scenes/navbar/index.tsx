@@ -4,7 +4,7 @@ import Logo from "@/assets/Logo.png";
 import {Link} from "./Link";
 import { SelectedPage } from "@/shared/type";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import {ActionButton} from "@/shared/ActionButton";
+
 
 type Props = {
   isTopOfPage: boolean;
@@ -26,38 +26,39 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT SIDE */}
-            <img alt="logo" src={Logo} />
+            <span className="text-primary-500 font-semibold text-xl">PRESENTATION</span>
 
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm`}>
                   <Link
+                  title="Home"
                     page="Home"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
+                    title="About"
                     page="Benefits"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
+                  title="Explanation"
                     page="Our Classes"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
+                  title="Conclution"
                     page="Contact Us"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                 </div>
                 <div className={`${flexBetween} gap-8`}>
-                  <p>Sign In</p>
-                  <ActionButton setSelectedPage={setSelectedPage}>
-                    Become a Member
-                  </ActionButton>
+                 LESSON 4
                 </div>
               </div>
             ) : (

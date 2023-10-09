@@ -41,9 +41,9 @@ export const Home = ({setSelectedPage}: Props) => {
             </div>
             </div>
             <p className="mt-8 text-sm">
-                   Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
-                   Studios to get the Body Shapes That you Dream of.. Get Your Dream
-                   Body Now.
+                  Our objective is to explain the principle of assimilation advocated by the Propaganda Movement.
+                 Appraise Rizal's relationship with the Propaganda Movement.
+
             </p>
             </motion.div>
 
@@ -58,12 +58,11 @@ export const Home = ({setSelectedPage}: Props) => {
             }}
             
             className='mt-8  flex items-center gap-8 md:justify-start '>
-                <ActionButton setSelectedPage={setSelectedPage}>
-                  Join Now
-                </ActionButton>
-                <AnchorLink href={`#${SelectedPage.Benifits}`} onClick={() => setSelectedPage(SelectedPage.ContactUs)} className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'>
+                
+                  <AnchorLink href={`#${SelectedPage.Benifits}`} onClick={() => setSelectedPage(SelectedPage.Benifits)} className='  text-sm font-bold text-primary-500 underline hover:text-secondary-500'>
                  <p>Learn More</p>
                 </AnchorLink>
+              
             </motion.div>
         </div>
         {/* image */}
@@ -75,12 +74,11 @@ export const Home = ({setSelectedPage}: Props) => {
     {/* sponsors */}
         
     { isAboveMediumScreen && (
-        <div className='h-[150px] w-full bg-primary-100 py-10'>
+        <div className='h-[150px] w-full bg-primary-100 py-20'>
             <div className='mx-auto w-5/6'>
-                <div className='flex w-3/5 items-center justify-between gap-8'>
-                    <img src={SponsorRedBull} alt="red-bull-sponsor" />
-                      <img src={SponsorFortune} alt="red-bull-furtune" />
-                        <img src={SponsorForbes} alt="red-bull-sponsor" />
+                <div className='flex w-3/5 items-center ju  justify-between  gap-8'>
+                  <div className='flex flex-col justify-center  font-bold text-2xl'><span className='text-green-600'>AUTHOR</span><span>BSCS - JASON EVARISTO</span></div>
+                     <div className='flex flex-col justify-center  font-bold text-2xl'><span className='text-green-600'>AUTHOR</span><span>BSIT - NEO LESTER PEGASON</span></div>
                 </div>
             </div>
         </div>
