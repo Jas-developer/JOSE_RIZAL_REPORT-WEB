@@ -21,7 +21,7 @@ const ContactUS = () => {    return (
              visible:{opacity: 1, x:0},
             }} className="md:w-3/5">
               <HText>
-                <span className="text-primary-500">CONCLUTIONS</span> 
+                <span className="text-primary-500">CONCLUSION</span> 
               </HText>
               <p className="my-5 text-lg">Let's digest all the idea that we have and put it into conlutions</p>
              </motion.div>
