@@ -57,8 +57,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                 </div>
-                <div className={`${flexBetween} gap-8`}>
-                 LESSON 4
+                <div className={`${flexBetween} cursor-pointer underline gap-8 font-semibold`}>
+               <p>TEST</p>
                 </div>
               </div>
             ) : (

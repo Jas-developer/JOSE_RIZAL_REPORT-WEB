@@ -50,10 +50,10 @@ const Benifits = ({setSelectedPage}: Props) => {
             {/* header */}
            <motion.div 
            initial="hidden" whileInView="visible" 
-             viewport={{once:false, amount: 0.5}}
-             transition={{ delay: 0.4, duration: 1}}
+             viewport={{once:true, amount: 0.5}}
+             transition={{duration: 1}}
              variants={{ 
-             hidden: {opacity: 0, x:-50},
+             hidden: {opacity: 0, x:-100},
              visible:{opacity: 1, x:0},
             }}
            className="md:my-5 md:w-3/5">
@@ -79,7 +79,7 @@ const Benifits = ({setSelectedPage}: Props) => {
                   <div className="before:absolute  before:content-abstractwaves before:-left-20 before:z-[1]  before:-top-20"></div>
                  <motion.div  initial="hidden" whileInView="visible" 
                   viewport={{once:false, amount: 0.5}}
-                  transition={{ delay: 0.4, duration: 1}}
+                  transition={{ delay: 0.2, duration: 1}}
                   variants={{ 
                   hidden: {opacity: 0, x:-50},
                   visible:{opacity: 1, x:0},
